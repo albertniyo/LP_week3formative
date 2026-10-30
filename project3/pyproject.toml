@@ -1,0 +1,20 @@
+[project]
+name = "project3"
+version = "0.1.0"
+description = "CPython extension for High Performance Data Analysis"
+readme = "README.md"
+authors = [
+    { name = "albertniyo"}
+]
+requires-python = ">=3.12"
+dependencies = [
+    "build>=1.6.1",
+    "setuptools>=84.2.1",
+]
+
+[project.scripts]
+project3 = "project3:main"
+
+[build-system]
+requires = ["uv_build>=0.13.4,<0.14.0"]
+build-backend = "uv_build"
