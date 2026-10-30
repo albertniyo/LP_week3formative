@@ -1,0 +1,20 @@
+running Python module:
+backend: python
+n: 1000
+mean: 2.512394048723093
+variance: 3310.2825922484003
+min: -99.91881206054249 max: 99.98156570184184
+outliers: 993
+normalize[0]: 0.6393393208292797
+
+running C module:
+backend: c
+n: 1000
+mean: 2.512394048723094
+variance: 3310.2825922484003
+min: -99.91881206054249 max: 99.98156570184184
+outliers: 993
+normalize[0]: 0.6393393208292797
+
+---Test Results---
+pass: Python and C results are identical
