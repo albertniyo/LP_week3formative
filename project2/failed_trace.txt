@@ -1,0 +1,74 @@
+10725 execve("./backup_tool", ["./backup_tool", "missing_source.txt"], 0x7ffd99288470 /* 93 vars */) = 0
+10725 newfstatat(AT_FDCWD, "/etc/ld.so.cache", {st_mode=S_IFREG|0644, st_size=147751, ...}, 0) = 0
+10725 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+10725 fstat(3, {st_mode=S_IFREG|0644, st_size=147751, ...}) = 0
+10725 mmap(NULL, 147751, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fe77a417000
+10725 close(3)                          = 0
+10725 brk(NULL)                         = 0x55e23e71c000
+10725 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fe77a415000
+10725 access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+10725 newfstatat(AT_FDCWD, "/etc/ld.so.cache", {st_mode=S_IFREG|0644, st_size=147751, ...}, 0) = 0
+10725 openat(AT_FDCWD, "/usr/lib/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+10725 read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\300y\2\0\0\0\0\0"..., 1024) = 1024
+10725 fstat(3, {st_mode=S_IFREG|0755, st_size=2215072, ...}) = 0
+10725 mmap(NULL, 2239312, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fe77a000000
+10725 mmap(0x7fe77a024000, 1552384, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x24000) = 0x7fe77a024000
+10725 mmap(0x7fe77a19f000, 483328, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19f000) = 0x7fe77a19f000
+10725 mmap(0x7fe77a215000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x214000) = 0x7fe77a215000
+10725 mmap(0x7fe77a21b000, 31568, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fe77a21b000
+10725 close(3)                          = 0
+10725 mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fe77a412000
+10725 arch_prctl(ARCH_SET_FS, 0x7fe77a412740) = 0
+10725 set_tid_address(0x7fe77a412d68)   = 10725
+10725 set_robust_list(0x7fe77a412a20, 24) = 0
+10725 rseq({cpu_id_start=0, cpu_id=RSEQ_CPU_ID_UNINITIALIZED, rseq_cs=NULL, flags=0, node_id=0, mm_cid=0, slice_ctrl={request=0, granted=0, __reserved=0}, __reserved=0}, 33, 0, 0x53053053) = 0
+10725 getrandom("\x79\x44\xb1\x63\x3b\x0d\x12\xfa\xe5\x75\xb5\xfe\x72\xd1\xc0\x99", 16, GRND_NONBLOCK) = 16
+10725 mprotect(0x7fe77a215000, 16384, PROT_READ) = 0
+10725 mprotect(0x55e235eb7000, 4096, PROT_READ) = 0
+10725 mprotect(0x7fe77a481000, 8192, PROT_READ) = 0
+10725 prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+10725 getrandom("\x66\x56\xf3\xd3\x37\xdd\x29\xbb", 8, GRND_NONBLOCK) = 8
+10725 mkdir("backup", 0755)             = 0
+10725 openat(AT_FDCWD, "backup/backup.log", O_WRONLY|O_CREAT|O_APPEND, 0644) = 3
+10725 brk(NULL)                         = 0x55e23e71c000
+10725 brk(0x55e23e73d000)               = 0x55e23e73d000
+10725 openat(AT_FDCWD, "/etc/localtime", O_RDONLY|O_CLOEXEC) = 4
+10725 fstat(4, {st_mode=S_IFREG|0644, st_size=149, ...}) = 0
+10725 fstat(4, {st_mode=S_IFREG|0644, st_size=149, ...}) = 0
+10725 read(4, "TZif2\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096) = 149
+10725 lseek(4, -80, SEEK_CUR)           = 69
+10725 read(4, "TZif2\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096) = 80
+10725 lseek(4, 148, SEEK_SET)           = 148
+10725 close(4)                          = 0
+10725 write(3, "[2026-10-30 09:49:06] Backup sta"..., 37) = 37
+10725 close(3)                          = 0
+10725 rt_sigprocmask(SIG_BLOCK, ~[], [], 8) = 0
+10725 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7fe77a412a10) = 10726
+10725 rt_sigprocmask(SIG_SETMASK, [] <unfinished ...>
+10726 set_robust_list(0x7fe77a412a20, 24 <unfinished ...>
+10725 <... rt_sigprocmask resumed>, NULL, 8) = 0
+10726 <... set_robust_list resumed>)    = 0
+10725 wait4(10726 <unfinished ...>
+10726 rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+10726 openat(AT_FDCWD, "missing_source.txt", O_RDONLY) = -1 ENOENT (No such file or directory)
+10726 dup(2)                            = 3
+10726 fcntl(3, F_GETFL)                 = 0x2 (flags O_RDWR)
+10726 fstat(3, {st_mode=S_IFSOCK|0777, st_size=0, ...}) = 0
+10726 write(3, "open source: No such file or dir"..., 39) = 39
+10726 close(3)                          = 0
+10726 openat(AT_FDCWD, "backup/backup.log", O_WRONLY|O_CREAT|O_APPEND, 0644) = 3
+10726 newfstatat(AT_FDCWD, "/etc/localtime", {st_mode=S_IFREG|0644, st_size=149, ...}, 0) = 0
+10726 write(3, "[2026-10-30 09:49:06] Child: fai"..., 36) = 36
+10726 close(3)                          = 0
+10726 exit_group(1)                     = ?
+10726 +++ exited with 1 +++
+10725 <... wait4 resumed>, [{WIFEXITED(s) && WEXITSTATUS(s) == 1}], 0, NULL) = 10726
+10725 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=10726, si_uid=1000, si_status=1, si_utime=0, si_stime=0} ---
+10725 fstat(1, {st_mode=S_IFSOCK|0777, st_size=0, ...}) = 0
+10725 openat(AT_FDCWD, "backup/backup.log", O_WRONLY|O_CREAT|O_APPEND, 0644) = 3
+10725 newfstatat(AT_FDCWD, "/etc/localtime", {st_mode=S_IFREG|0644, st_size=149, ...}, 0) = 0
+10725 write(3, "[2026-10-30 09:49:06] Parent: fa"..., 38) = 38
+10725 close(3)                          = 0
+10725 write(1, "Backup failed\n", 14)   = 14
+10725 exit_group(1)                     = ?
+10725 +++ exited with 1 +++

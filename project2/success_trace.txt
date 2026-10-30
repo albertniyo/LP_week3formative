@@ -1,0 +1,75 @@
+10719 execve("./backup_tool", ["./backup_tool", "source.txt"], 0x7ffc5c34fdc0 /* 93 vars */) = 0
+10719 newfstatat(AT_FDCWD, "/etc/ld.so.cache", {st_mode=S_IFREG|0644, st_size=147751, ...}, 0) = 0
+10719 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+10719 fstat(3, {st_mode=S_IFREG|0644, st_size=147751, ...}) = 0
+10719 mmap(NULL, 147751, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f337e13f000
+10719 close(3)                          = 0
+10719 brk(NULL)                         = 0x555bb938a000
+10719 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f337e13d000
+10719 access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+10719 newfstatat(AT_FDCWD, "/etc/ld.so.cache", {st_mode=S_IFREG|0644, st_size=147751, ...}, 0) = 0
+10719 openat(AT_FDCWD, "/usr/lib/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+10719 read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\300y\2\0\0\0\0\0"..., 1024) = 1024
+10719 fstat(3, {st_mode=S_IFREG|0755, st_size=2215072, ...}) = 0
+10719 mmap(NULL, 2239312, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f337de00000
+10719 mmap(0x7f337de24000, 1552384, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x24000) = 0x7f337de24000
+10719 mmap(0x7f337df9f000, 483328, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19f000) = 0x7f337df9f000
+10719 mmap(0x7f337e015000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x214000) = 0x7f337e015000
+10719 mmap(0x7f337e01b000, 31568, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f337e01b000
+10719 close(3)                          = 0
+10719 mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f337e13a000
+10719 arch_prctl(ARCH_SET_FS, 0x7f337e13a740) = 0
+10719 set_tid_address(0x7f337e13ad68)   = 10719
+10719 set_robust_list(0x7f337e13aa20, 24) = 0
+10719 rseq({cpu_id_start=0, cpu_id=RSEQ_CPU_ID_UNINITIALIZED, rseq_cs=NULL, flags=0, node_id=0, mm_cid=0, slice_ctrl={request=0, granted=0, __reserved=0}, __reserved=0}, 33, 0, 0x53053053) = 0
+10719 getrandom("\x71\x45\x18\x98\xe3\xa3\x77\x62\x0d\xb2\xcd\xf6\x61\x1c\x01\xcb", 16, GRND_NONBLOCK) = 16
+10719 mprotect(0x7f337e015000, 16384, PROT_READ) = 0
+10719 mprotect(0x555b80886000, 4096, PROT_READ) = 0
+10719 mprotect(0x7f337e1a9000, 8192, PROT_READ) = 0
+10719 prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+10719 getrandom("\x71\xa1\xcf\xda\x38\x84\x9c\xc8", 8, GRND_NONBLOCK) = 8
+10719 mkdir("backup", 0755)             = 0
+10719 openat(AT_FDCWD, "backup/backup.log", O_WRONLY|O_CREAT|O_APPEND, 0644) = 3
+10719 brk(NULL)                         = 0x555bb938a000
+10719 brk(0x555bb93ab000)               = 0x555bb93ab000
+10719 openat(AT_FDCWD, "/etc/localtime", O_RDONLY|O_CLOEXEC) = 4
+10719 fstat(4, {st_mode=S_IFREG|0644, st_size=149, ...}) = 0
+10719 fstat(4, {st_mode=S_IFREG|0644, st_size=149, ...}) = 0
+10719 read(4, "TZif2\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096) = 149
+10719 lseek(4, -80, SEEK_CUR)           = 69
+10719 read(4, "TZif2\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096) = 80
+10719 lseek(4, 148, SEEK_SET)           = 148
+10719 close(4)                          = 0
+10719 write(3, "[2026-10-30 09:49:06] Backup sta"..., 37) = 37
+10719 close(3)                          = 0
+10719 rt_sigprocmask(SIG_BLOCK, ~[], [], 8) = 0
+10719 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f337e13aa10) = 10720
+10719 rt_sigprocmask(SIG_SETMASK, [] <unfinished ...>
+10720 set_robust_list(0x7f337e13aa20, 24) = 0
+10719 <... rt_sigprocmask resumed>, NULL, 8) = 0
+10720 rt_sigprocmask(SIG_SETMASK, [] <unfinished ...>
+10719 wait4(10720 <unfinished ...>
+10720 <... rt_sigprocmask resumed>, NULL, 8) = 0
+10720 openat(AT_FDCWD, "source.txt", O_RDONLY) = 3
+10720 openat(AT_FDCWD, "backup/destination.txt", O_WRONLY|O_CREAT|O_TRUNC, 0644) = 4
+10720 read(3, "hello backup payload\n", 4096) = 21
+10720 write(4, "hello backup payload\n", 21) = 21
+10720 read(3, "", 4096)                 = 0
+10720 close(3)                          = 0
+10720 close(4)                          = 0
+10720 openat(AT_FDCWD, "backup/backup.log", O_WRONLY|O_CREAT|O_APPEND, 0644) = 3
+10720 newfstatat(AT_FDCWD, "/etc/localtime", {st_mode=S_IFREG|0644, st_size=149, ...}, 0) = 0
+10720 write(3, "[2026-10-30 09:49:06] Child: com"..., 38) = 38
+10720 close(3)                          = 0
+10720 exit_group(0)                     = ?
+10720 +++ exited with 0 +++
+10719 <... wait4 resumed>, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 10720
+10719 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=10720, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+10719 fstat(1, {st_mode=S_IFSOCK|0777, st_size=0, ...}) = 0
+10719 openat(AT_FDCWD, "backup/backup.log", O_WRONLY|O_CREAT|O_APPEND, 0644) = 3
+10719 newfstatat(AT_FDCWD, "/etc/localtime", {st_mode=S_IFREG|0644, st_size=149, ...}, 0) = 0
+10719 write(3, "[2026-10-30 09:49:06] Parent: su"..., 38) = 38
+10719 close(3)                          = 0
+10719 write(1, "Backup succeeded\n", 17) = 17
+10719 exit_group(0)                     = ?
+10719 +++ exited with 0 +++
